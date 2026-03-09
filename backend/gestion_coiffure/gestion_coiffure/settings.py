@@ -23,11 +23,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = str(config('DEBUG', default='False')).lower() in ('1', 'true', 'yes', 'on')
 
-ALLOWED_HOSTS = config(
-    'ALLOWED_HOSTS',
-    default='127.0.0.1,localhost',
-    cast=Csv(),
-)
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'barberpro-pc2e.onrender.com']
 
 
 # Application definition
